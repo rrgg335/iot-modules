@@ -1,0 +1,1 @@
+<div class="col-md-12 pt-2 pb-4 text-danger">Some unknown error occured while trying to fetch data. Please try again.</div>

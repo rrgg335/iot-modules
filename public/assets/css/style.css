@@ -1,0 +1,78 @@
+
+body{
+	overflow: hidden;
+}
+a {
+	text-decoration: none !important;
+}
+.maw-250p {
+	max-width: 250px !important;
+}
+.dropdown-toggle::after{
+	display: none !important;
+}
+button, button:hover, button:focus, button:active,
+.btn, .btn:hover, .btn:focus, .btn:active{
+	outline: none !important;
+	box-shadow: none !important;
+}
+.form-control, .form-control:hover, .form-control:focus, .form-control:active{
+	outline: none !important;
+	box-shadow: none !important;
+}
+label{
+	margin-bottom: 5px !important;
+}
+#navbar{
+	position: fixed;
+	padding-top: 15px;
+    left: 0;
+    top: 0;
+    z-index: 999;
+	height: 100vh;
+	min-width: 200px;
+	overflow: auto;
+}
+#content {
+	position: fixed;
+	padding-top: 15px;
+	padding-left: 15px;
+    left: 200px;
+    top: 0;
+    width: calc(100% - 200px);
+	height: 100vh;
+	overflow: auto;
+}
+.details-section{
+	display: flex;
+	flex-direction: row;
+    gap: 1em;
+	justify-content: space-between;
+    margin-bottom: 1em;
+}
+.details-section > div:first-child{
+	color: #6c757d;
+}
+.details-section > div:last-child{
+	text-align: end;
+}
+.status-dot{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+.svg-wh-15p svg{
+	width: 15px !important;
+	height: 15px !important;
+}
+.mah-250p{
+	max-height: 250px;
+}
+.measurement-numeric-index,
+.measurement-deletion-btn{
+	display: flex !important;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
