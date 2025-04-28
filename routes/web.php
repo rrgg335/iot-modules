@@ -2,17 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
-    DashboardController,
     ModuleController,
     MeasurementTypeController,
     MeasurementUnitController
 };
 
 Route::middleware('guest:web')->group(function(){
-	Route::redirect('/','dashboard');
-	Route::prefix('dashboard')->controller(DashboardController::class)->name('dashboard.')->group(function(){
-		Route::get('/','index')->name('index');
-	});
 	Route::prefix('modules')->controller(ModuleController::class)->name('modules.')->group(function(){
 		Route::get('/','index')->name('index');
 		Route::get('action/{module_id}/{action}','action')->name('action')->where('action','stop|pause|start');
