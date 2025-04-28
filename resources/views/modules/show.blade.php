@@ -80,11 +80,11 @@
 						<h5 class="mb-4 mt-3">Current Values</h5>
 						<ol>
 							@foreach($module->measurements as $measurement)
-								<li class="mb-2">
-									@if(!empty($measurement->current_value))
-										<p class="mb-0">{{ $measurement->measurement_type->name }}: {{ $measurement->measurement_unit->prefix }}{{ $measurement->current_value }}{{ $measurement->measurement_unit->suffix }}</p>
-									@endif
-								</li>
+								@if(isset($measurement->current_value))
+									<li class="mb-2">
+											<p class="mb-0">{{ $measurement->measurement_type->name }}: {{ $measurement->measurement_unit->prefix }}{{ $measurement->current_value }}{{ $measurement->measurement_unit->suffix }}</p>
+									</li>
+								@endif
 							@endforeach
 						</ol>
 					</div>
@@ -166,7 +166,7 @@
 						options: {
 							plugins:{
 								legend:{
-									display: false,
+									display: true,
 								},
 								tooltip: {
 									displayColors: false,
