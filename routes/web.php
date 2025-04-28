@@ -8,6 +8,7 @@ use App\Http\Controllers\{
 };
 
 Route::middleware('guest:web')->group(function(){
+	Route::redirect('/','modules');
 	Route::prefix('modules')->controller(ModuleController::class)->name('modules.')->group(function(){
 		Route::get('/','index')->name('index');
 		Route::get('action/{module_id}/{action}','action')->name('action')->where('action','stop|pause|start');
