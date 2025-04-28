@@ -23,7 +23,7 @@ class ModuleController extends Controller {
 		foreach($all_measurement_units as $measurement_unit){
 			$measurement_units[$measurement_unit->measurement_type->name][] = $measurement_unit;
 		}
-		return response()->view('modules.index',compact('modules','measurement_types','measurement_units'))->header('Refresh','30');
+		return response()->view('modules.index',compact('modules','measurement_types','measurement_units'));
 	}
 
 	public function show(Request $request,$id){
